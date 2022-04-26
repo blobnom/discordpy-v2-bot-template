@@ -15,7 +15,7 @@ class Bot(commands.Bot):
 
         self.config = config
 
-    async def setup_hook(self) -> None:
+    async def setup_hook(self):
         for file in Path("cogs").glob("*.py"):
             cog_name = file.name.split(".")[0]
             await self.load_extension(f"cogs.{cog_name}")
@@ -26,7 +26,7 @@ class Bot(commands.Bot):
         else:
             await self.tree.sync(guild=discord.Object(id=self.config["test-server-id"]))
 
-    async def on_ready(self) -> None:
+    async def on_ready(self):
         print("Bot is ready!")
         await self.change_presence(activity=discord.Activity(name="with slash commands."))
 
