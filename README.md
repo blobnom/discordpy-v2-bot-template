@@ -1,5 +1,5 @@
 # discordpy-v2-bot-template
-A simple bot template for discord.py v2.0 using slash commands.
+A simple bot template for discord.py v2.0 with slash commands.
 
 ## Installation Guide
 * Download Python [here](https://python.org/downloads)
